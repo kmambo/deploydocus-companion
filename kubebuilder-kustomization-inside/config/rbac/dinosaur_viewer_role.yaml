@@ -1,32 +1,23 @@
----
+# permissions for end users to view dinosaurs.
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: manager-role
+  labels:
+    app.kubernetes.io/name: kubebuilder-kustomization-inside
+    app.kubernetes.io/managed-by: kustomize
+  name: dinosaur-viewer-role
 rules:
 - apiGroups:
   - deployer.deploydocus.io
   resources:
   - dinosaurs
   verbs:
-  - create
-  - delete
   - get
   - list
-  - patch
-  - update
   - watch
-- apiGroups:
-  - deployer.deploydocus.io
-  resources:
-  - dinosaurs/finalizers
-  verbs:
-  - update
 - apiGroups:
   - deployer.deploydocus.io
   resources:
   - dinosaurs/status
   verbs:
   - get
-  - patch
-  - update

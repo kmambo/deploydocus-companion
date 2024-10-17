@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- deployer_v1alpha1_dinosaur.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
