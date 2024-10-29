@@ -1,0 +1,47 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: kubebuilder-kustomization-inside.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: Dinosaur is the Schema for the dinosaurs API
+      displayName: Dinosaur
+      kind: Dinosaur
+      name: dinosaurs.deployer.deploydocus.io
+      version: v1alpha1
+  description: whatever
+  displayName: deploydocus
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - dinos
+  links:
+  - name: Kubebuilder Kustomization Inside
+    url: https://kubebuilder-kustomization-inside.domain
+  maintainers:
+  - email: partho@partho.dev
+    name: partho
+  maturity: alpha
+  provider:
+    name: deploydocus.io
+  version: 0.0.0
