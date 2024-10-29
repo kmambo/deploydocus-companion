@@ -1,0 +1,9 @@
+apiVersion: deployer.deploydocus.io/v1alpha1
+kind: Dinosaur
+metadata:
+  labels:
+    app.kubernetes.io/name: kubebuilder-kustomization-inside
+    app.kubernetes.io/managed-by: kustomize
+  name: dinosaur-sample
+spec:
+  # TODO(user): Add fields here
